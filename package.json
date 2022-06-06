@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:cloud": "cypress run --record --key 545de53a-f15f-4e9c-b50f-b2b02bbd6e0e",
+    "test:local": "cypress run"
   },
   "repository": {
     "type": "git",
