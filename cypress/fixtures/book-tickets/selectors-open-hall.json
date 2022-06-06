@@ -1,0 +1,8 @@
+{
+    "blueHall": "#start-sales > div:nth-child(2) > ul > li:nth-child(6) > input",
+    "openMessage": "#start-sales .text-center p",
+    "openButton": "#start-sales .conf-step__button",
+    "selectTime": "a.movie-seances__time",
+    "book": ".acceptin-button",
+    "success": ".acceptin-button"
+}
