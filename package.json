@@ -6,9 +6,10 @@
   "scripts": {
     "test:cloud": "cypress run --record --key 545de53a-f15f-4e9c-b50f-b2b02bbd6e0e",
     "test:local": "cypress run",
-    "cy:spec1:cloud": "cypress run --spec 'cypress/e2e/admin/login.cy.js' --record --key 545de53a-f15f-4e9c-b50f-b2b02bbd6e0e",
-    "cy:spec2:cloud": "cypress run --spec 'cypress/e2e/book-tickets/book-tickets.cy.js' --record --key 545de53a-f15f-4e9c-b50f-b2b02bbd6e0e",
-    "cy:parallel:cloud": "npm run cy:spec1:cloud -b chrome --group admin --ci-build-id 1 & npm run cy:spec2:cloud -b chrome --group book-tickets --ci-build-id 1"
+    "cy:spec1:cloud": "cypress run -b chrome --spec 'cypress/e2e/admin/login.cy.js' --record --key 545de53a-f15f-4e9c-b50f-b2b02bbd6e0e",
+    "cy:spec2:cloud": "cypress run -b chrome --spec 'cypress/e2e/book-tickets/book-tickets.cy.js' --record --key 545de53a-f15f-4e9c-b50f-b2b02bbd6e0e",
+    "cy:parallel:cloud": "npm run cy:spec1:cloud --group admin --ci-build-id 1 & npm run cy:spec2:cloud --group book-tickets --ci-build-id 1",
+    "cy:parallel2:cloud": "npm run cy:spec1:cloud & npm run cy:spec2:cloud --parallel"
   },
   "repository": {
     "type": "git",
