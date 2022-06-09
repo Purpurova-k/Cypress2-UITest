@@ -6,10 +6,16 @@
   "scripts": {
     "test:cloud": "cypress run --record --key 545de53a-f15f-4e9c-b50f-b2b02bbd6e0e",
     "test:local": "cypress run",
-    "cy:spec1:cloud": "cypress run -b chrome --spec 'cypress/e2e/admin/login.cy.js' --record --key 545de53a-f15f-4e9c-b50f-b2b02bbd6e0e",
-    "cy:spec2:cloud": "cypress run -b chrome --spec 'cypress/e2e/book-tickets/book-tickets.cy.js' --record --key 545de53a-f15f-4e9c-b50f-b2b02bbd6e0e",
+    "cy:spec1:cloud": "cypress run --spec 'cypress/e2e/admin/login.cy.js' --record --key 545de53a-f15f-4e9c-b50f-b2b02bbd6e0e",
+    "cy:spec2:cloud": "cypress run --spec 'cypress/e2e/book-tickets/book-tickets.cy.js' --record --key 545de53a-f15f-4e9c-b50f-b2b02bbd6e0e",
     "cy:parallel:cloud": "npm run cy:spec1:cloud --group admin --ci-build-id 1 & npm run cy:spec2:cloud --group book-tickets --ci-build-id 1",
-    "cy:parallel2:cloud": "npm run cy:spec1:cloud & npm run cy:spec2:cloud --parallel"
+    "cy:parallel2:cloud": "npm run cy:spec1:cloud & npm run cy:spec2:cloud --parallel",
+    "cy:chrome:cloud": "cypress run -b chrome --record --key 545de53a-f15f-4e9c-b50f-b2b02bbd6e0e",
+    "cy:firefox:cloud": "cypress run -b firefox --record --key 545de53a-f15f-4e9c-b50f-b2b02bbd6e0e",
+    "cy:edge:cloud": "cypress run -b edge --record --key 545de53a-f15f-4e9c-b50f-b2b02bbd6e0e",
+    "cy:parallel3:cloud": "npm run cy:spec1:cloud -b chrome & npm run cy:spec2:cloud -b firefox --parallel",
+    "cy:test1": "cypress run --spec 'cypress/e2e/admin/successful.login.cy.js"
+
   },
   "repository": {
     "type": "git",
